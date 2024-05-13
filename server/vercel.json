@@ -1,5 +1,23 @@
 {
     "version": 2,
-    "builds": [{"src": "./index.js", "use":"@vercel/node"}],
-    "routes": [{ "src": "/(.*)", "dest":"/" }]
-}
+    "builds": [
+      { "src": "index.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/api/auth/(.*)", "dest": "index.js" },
+      { "src": "/api/customer/(.*)", "dest": "index.js" },
+      { "src": "/api/role/(.*)", "dest": "index.js" },
+      { "src": "/api/type/(.*)", "dest": "index.js" },
+      { "src": "/api/unit/(.*)", "dest": "index.js" },
+      { "src": "/api/user/(.*)", "dest": "index.js" },
+      { "src": "/api/item/(.*)", "dest": "index.js" },
+      { "src": "/api/status/(.*)", "dest": "index.js" },
+      { "src": "/api/request/(.*)", "dest": "index.js" },
+      { "src": "/api/request_ref/(.*)", "dest": "index.js" },
+      { "src": "/api/sales/(.*)", "dest": "index.js" },
+      { "src": "/api/sales_ref/(.*)", "dest": "index.js" },
+      { "src": "/api/remain_price/(.*)", "dest": "index.js" },
+      { "src": "/(.*)", "dest": "index.js" }
+    ]
+  }
+  
